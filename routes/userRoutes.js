@@ -2,6 +2,10 @@ const express = require('express');
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const router = express.Router();
+const cors = require('cors');
+
+router.use(cors());
+
 
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 

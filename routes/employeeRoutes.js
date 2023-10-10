@@ -3,6 +3,10 @@ const router = express.Router();
 const Employee = require('../models/employee');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
+const cors = require('cors');
+
+router.use(cors());
+
 
 // POST route to create a new employee
 router.post('/', async (req, res) => {
